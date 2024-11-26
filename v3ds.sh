@@ -88,7 +88,7 @@ async def change_status():
         if os.path.exists(database_file):
             with open(database_file, 'r') as f:
                 instance_count = len(f.readlines())
-        status = f"with {instance_count} Instances"
+        status = f"Sus Yuty Gay"
         await bot.change_presence(activity=discord.Game(name=status))
     except Exception as e:
         print(f"Failed to update status: {e}")
@@ -277,7 +277,7 @@ async def list_servers(interaction: discord.Interaction):
         embed = discord.Embed(title="Your Instances", color=0x00ff00)
         for server in servers:
           _, container_name, _ = server.split('|')
-          embed.add_field(name=container_name, value="6GB RAM - 2core", inline=False)
+          embed.add_field(name=container_name, value="16GB RAM - 4core", inline=False)
         await interaction.response.send_message(embed=embed)
     else:
         await interaction.response.send_message(embed=discord.Embed(description="You have no servers.", color=0xff0000))
